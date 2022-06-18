@@ -13,6 +13,7 @@ let guessed_words = [];
 let hints = [];
 function recursiveAsyncReadLine () {
   if (tries >= 6) {
+    console.log('LOL couldnt even win with hax');
     rl.close();
     return;
   }
@@ -44,6 +45,11 @@ function recursiveAsyncReadLine () {
     rl.question('Enter your hint string: ', function (hint_str) {
       hints.push(hint_str);
 
+      if (hint_str.toUpperCase() === 'GGGGG') {
+        console.log('AYY congrats!');
+        rl.close();
+      }
+
       let puzzle_state = new PuzzleState(guessed_words, hints);
       puzzle_state.suggestWords();
       tries++;
@@ -53,16 +59,7 @@ function recursiveAsyncReadLine () {
 }
 
 rl.on('close', function () {
-  console.log('\nBYE BYE !!!');
   process.exit(0);
 });
 
 recursiveAsyncReadLine();
-/*
-let guessed_words = ['trial'];
-let hints = ['BBBGB'];
-
-let puzzle_state = new PuzzleState(guessed_words, hints);
-
-puzzle_state.suggestWords();
-*/

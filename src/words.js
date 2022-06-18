@@ -115,7 +115,7 @@ export const word_list =
   'judge', 'rower', 'artsy', 'rural', 'shave'
 ];
 
-export const valid_guess_list = 
+export const guessable_words = 
 [
   'aahed', 'aalii', 'aargh', 'aarti', 'abaca', 'abaci', 'abacs', 'abaft', 'abaka', 'abamp', 'aband', 'abash', 'abask', 'abaya', 'abbas', 'abbed', 'abbes', 'abcee', 'abeam', 'abear', 'abele',
   'abers', 'abets', 'abies', 'abler', 'ables', 'ablet', 'ablow', 'abmho', 'abohm', 'aboil', 'aboma', 'aboon', 'abord', 'abore', 'abram', 'abray', 'abrim', 'abrin', 'abris', 'absey', 'absit',
